@@ -2,16 +2,16 @@
 class SaucectlInternal < Formula
   desc "Homebrew Formulae to saucectl binaries"
   homepage "https://saucelabs.com"
-  version "0.3.13"
+  version "0.3.14"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/saucelabs/saucectl-internal/releases/download/v0.3.13/saucectl-internal_0.3.13_mac_64-bit.tar.gz"
-    sha256 "13797eb6df54a0f384a0b08fbc55afcb509f9a806a19e3858a18c98e773eced9"
+    url "https://github.com/saucelabs/saucectl-internal/releases/download/v0.3.14/saucectl-internal_0.3.14_mac_64-bit.tar.gz"
+    sha256 "04876453d0877f1f136ae39daf7b9ef1405477493c665f4b35baeb4b30929117"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/saucelabs/saucectl-internal/releases/download/v0.3.13/saucectl-internal_0.3.13_linux_64-bit.tar.gz"
-      sha256 "f36949ea45413e2331b1d867edda6eec5731147fa9a493f7240c222ae3c69b68"
+      url "https://github.com/saucelabs/saucectl-internal/releases/download/v0.3.14/saucectl-internal_0.3.14_linux_64-bit.tar.gz"
+      sha256 "c961b147191b113e16cf98a2bddfca4c0fc3ed61897953e6c4ee4dd38a01c24e"
     end
   end
 
