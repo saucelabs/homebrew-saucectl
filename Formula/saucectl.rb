@@ -2,16 +2,16 @@
 class Saucectl < Formula
   desc "A command line interface to run testrunner tests."
   homepage "https://saucelabs.com/"
-  version "0.5.9"
+  version "0.6.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/saucelabs/saucectl-internal/releases/download/v0.5.9/saucectl_0.5.9_mac_64-bit.tar.gz"
-    sha256 "96377319dbbf8e36e1680f3483b49e8df8fde7e64f904df417e7a5602c5d9622"
+    url "https://github.com/saucelabs/saucectl-internal/releases/download/v0.6.0/saucectl_0.6.0_mac_64-bit.tar.gz"
+    sha256 "d7399483866cd7c75157aa9275a144043be3ec065c62dad6321e91987267b955"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/saucelabs/saucectl-internal/releases/download/v0.5.9/saucectl_0.5.9_linux_64-bit.tar.gz"
-      sha256 "a24e2dad0e761ff369671f8254e9f3a7646be49199001fff6e0d4a24ad93ab9d"
+      url "https://github.com/saucelabs/saucectl-internal/releases/download/v0.6.0/saucectl_0.6.0_linux_64-bit.tar.gz"
+      sha256 "81009c2586f82f1082c97ac111be29c2c41006cd2b6fa7a0efd9cee4d762f72c"
     end
   end
   
