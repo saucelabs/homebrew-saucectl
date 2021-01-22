@@ -21,8 +21,6 @@ class Saucectl < Formula
     sha256 "b54c566ea66f1419b2cee6a42113c0d7d94fcbbcabbde195eaa78ee03128cb03"
   end
 
-  depends_on "docker"
-
   def install
     bin.install "saucectl"
   end
