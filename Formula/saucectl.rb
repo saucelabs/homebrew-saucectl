@@ -10,15 +10,15 @@ class Saucectl < Formula
 
   if OS.mac?
     url "https://github.com/saucelabs/saucectl/releases/download/v0.24.3/saucectl_0.24.3_mac_64-bit.tar.gz"
-    sha256 "4fb923d05d5d7263546760846247cbb6d051993c07214242e0e88fb6cc82853f"
+    sha256 "c6f211796529df518014ea358739ec346436f55d396a16df35117cf412c27b6f"
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/saucelabs/saucectl/releases/download/v0.24.3/saucectl_0.24.3_linux_64-bit.tar.gz"
-    sha256 "08579aeab39295a464cc530f9b88299cbbe069f5a02cf7807e7caa4ca0a98481"
+    sha256 "d66b748cb1083cdbc2a5c074de91e3c4aa55bc9441bf40ed60ba145ba2586644"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
     url "https://github.com/saucelabs/saucectl/releases/download/v0.24.3/saucectl_0.24.3_linux_arm64.tar.gz"
-    sha256 "f424ba2a070b34c645e8160ffda083e5491a18057c61ec50e6dd4a7e360e1b98"
+    sha256 "9432a56c93191c5d2e41e14a3dff1a9b25a2fd4b36586455069214f77a627339"
   end
 
   depends_on "docker"
