@@ -8,7 +8,7 @@ Or `brew tap saucelabs/saucectl` and then `brew install <formula>`.
 Or install via URL (which will not receive updates):
 
 ```
-brew install https://raw.githubusercontent.com/saucelabs/homebrew-saucectl/main/Formula/<formula>.rb
+brew install https://raw.githubusercontent.com/saucelabs/homebrew-saucectl/master/Formula/<formula>.rb
 ```
 
 ## Documentation
