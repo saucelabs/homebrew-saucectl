@@ -5,24 +5,24 @@
 class Saucectl < Formula
   desc "Saucectl is a command-line interface to run testrunner tests"
   homepage "https://saucelabs.com/"
-  version "0.38.2"
+  version "0.38.3"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/saucelabs/saucectl/releases/download/v0.38.2/saucectl_0.38.2_mac_64-bit.tar.gz"
-    sha256 "6c7b61ce1a20ebe670b9cda646d2ee684c25698c82653a7ee12348291016d3ee"
+    url "https://github.com/saucelabs/saucectl/releases/download/v0.38.3/saucectl_0.38.3_mac_64-bit.tar.gz"
+    sha256 "bb44b157bed00e5e4f0ac78d71040399a6bc6406ff4f32b1b841486fac799dcb"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/saucelabs/saucectl/releases/download/v0.38.2/saucectl_0.38.2_mac_arm64.tar.gz"
-    sha256 "e1bb2b24d2b094a25b131a678f4b2b7348e1493f5f6d2eacebb556c41ae58747"
+    url "https://github.com/saucelabs/saucectl/releases/download/v0.38.3/saucectl_0.38.3_mac_arm64.tar.gz"
+    sha256 "a5bb8f2dce4cd15433447b8ecbc099ca6c9c5d543dfb349781eae7c6afeca6f0"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/saucelabs/saucectl/releases/download/v0.38.2/saucectl_0.38.2_linux_64-bit.tar.gz"
-    sha256 "5bd5f6908a82fd54a5e21baac35451ed23362d880a5f9bc735293a80c94f0416"
+    url "https://github.com/saucelabs/saucectl/releases/download/v0.38.3/saucectl_0.38.3_linux_64-bit.tar.gz"
+    sha256 "034a0959088f1e95201108dab6bc126072f3ba88dbaaaeb684d44c429ed93e9d"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/saucelabs/saucectl/releases/download/v0.38.2/saucectl_0.38.2_linux_arm64.tar.gz"
-    sha256 "5f6a937c4eca4bdbaac048ef8339131b9ba581f1bdfc7530331350e6ef38e171"
+    url "https://github.com/saucelabs/saucectl/releases/download/v0.38.3/saucectl_0.38.3_linux_arm64.tar.gz"
+    sha256 "2677d98cc4b37d584823ec08ba199a47d2db76a8d7da3febe744373e208abfc3"
   end
 
   def install
