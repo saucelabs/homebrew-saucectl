@@ -5,33 +5,29 @@
 class Saucectl < Formula
   desc "Saucectl is a command-line interface to run testrunner tests"
   homepage "https://saucelabs.com/"
-  version "0.43.0"
+  version "0.43.1"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/saucelabs/saucectl/releases/download/v0.43.0/saucectl_0.43.0_mac_64-bit.tar.gz"
-      sha256 "0d77c865e2a1e19783855911d73e9eab95cead962d24e50a3b879a97fcccb715"
+      url "https://github.com/saucelabs/saucectl/releases/download/v0.43.1/saucectl_0.43.1_mac_64-bit.tar.gz"
+      sha256 "e5bdbf02cef877e62e92f44f0d7fd0f6be3b81a45b1062d55ea30721b7ab93ec"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/saucelabs/saucectl/releases/download/v0.43.0/saucectl_0.43.0_mac_arm64.tar.gz"
-      sha256 "27cf9582918906b754cc37c326e0872ee41a2330a195c20d48f94169991c1ed2"
+      url "https://github.com/saucelabs/saucectl/releases/download/v0.43.1/saucectl_0.43.1_mac_arm64.tar.gz"
+      sha256 "52c8861679d296bc268fcb75ba6c6056fa855c39abd204cae4fe6bde2b7336cc"
     end
-
-    depends_on arch: [:x86_64, :aarch64]
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/saucelabs/saucectl/releases/download/v0.43.0/saucectl_0.43.0_linux_64-bit.tar.gz"
-      sha256 "67aa1337eb9c2a21757a4d0c00e3ed812aca00df71a9a5d23dc2df8874a9fb36"
+      url "https://github.com/saucelabs/saucectl/releases/download/v0.43.1/saucectl_0.43.1_linux_64-bit.tar.gz"
+      sha256 "22ed7863c68f5b93b988b89ba55c50a9d5d8638f20b1b8877a7708c969d6ccd3"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/saucelabs/saucectl/releases/download/v0.43.0/saucectl_0.43.0_linux_arm64.tar.gz"
-      sha256 "4b41400a14664b574bdf82ae27caf4ddae75733966aa9ae7f5b7386ffeb5cf60"
+      url "https://github.com/saucelabs/saucectl/releases/download/v0.43.1/saucectl_0.43.1_linux_arm64.tar.gz"
+      sha256 "911134571bae6bf6ab9bd3ea83a976c5c4e99d1c10812a8f0c5f8256ab0aa711"
     end
-
-    depends_on arch: [:x86_64, :aarch64]
   end
 
   def install
