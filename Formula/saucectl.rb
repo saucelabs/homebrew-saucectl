@@ -5,24 +5,33 @@
 class Saucectl < Formula
   desc "Saucectl is a command-line interface to run testrunner tests"
   homepage "https://saucelabs.com/"
-  version "0.42.0"
+  version "0.43.0"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/saucelabs/saucectl/releases/download/v0.42.0/saucectl_0.42.0_mac_64-bit.tar.gz"
-    sha256 "6236f70873ea12b6df8bc4cd5abe6881274e911e3d5be0c29e36f69793b3e019"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/saucelabs/saucectl/releases/download/v0.43.0/saucectl_0.43.0_mac_64-bit.tar.gz"
+      sha256 "0d77c865e2a1e19783855911d73e9eab95cead962d24e50a3b879a97fcccb715"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/saucelabs/saucectl/releases/download/v0.43.0/saucectl_0.43.0_mac_arm64.tar.gz"
+      sha256 "27cf9582918906b754cc37c326e0872ee41a2330a195c20d48f94169991c1ed2"
+    end
+
+    depends_on arch: [:x86_64, :aarch64]
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/saucelabs/saucectl/releases/download/v0.42.0/saucectl_0.42.0_mac_arm64.tar.gz"
-    sha256 "fda8dbca4d5f8ede1bc393b554d9940062d678987fd38a6ef4705ed276ed1283"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/saucelabs/saucectl/releases/download/v0.42.0/saucectl_0.42.0_linux_64-bit.tar.gz"
-    sha256 "9654d1b0822a230c6da8fd51246eec1bb39f9bfe40ca8548db56fd5ada7db16d"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/saucelabs/saucectl/releases/download/v0.42.0/saucectl_0.42.0_linux_arm64.tar.gz"
-    sha256 "dd796c54aca46f502ca0b1832bebb4e824fd01b3782b82fc7543943fe8480a18"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/saucelabs/saucectl/releases/download/v0.43.0/saucectl_0.43.0_linux_64-bit.tar.gz"
+      sha256 "67aa1337eb9c2a21757a4d0c00e3ed812aca00df71a9a5d23dc2df8874a9fb36"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/saucelabs/saucectl/releases/download/v0.43.0/saucectl_0.43.0_linux_arm64.tar.gz"
+      sha256 "4b41400a14664b574bdf82ae27caf4ddae75733966aa9ae7f5b7386ffeb5cf60"
+    end
+
+    depends_on arch: [:x86_64, :aarch64]
   end
 
   def install
