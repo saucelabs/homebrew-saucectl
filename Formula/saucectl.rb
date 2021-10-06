@@ -5,28 +5,28 @@
 class Saucectl < Formula
   desc "Saucectl is a command-line interface to run testrunner tests"
   homepage "https://saucelabs.com/"
-  version "0.68.2"
+  version "0.68.3"
   bottle :unneeded
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/saucelabs/saucectl/releases/download/v0.68.2/saucectl_0.68.2_mac_64-bit.tar.gz"
-      sha256 "aa0cbf4c26090982bee5b8c9879196bb584dd8925e5b752676af717d54c5a6ce"
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/saucelabs/saucectl/releases/download/v0.68.2/saucectl_0.68.2_mac_arm64.tar.gz"
-      sha256 "171430b9f1fa43d9cd37f75f107803a34e93824ecdafd2c2efa31f7959eb2757"
+      url "https://github.com/saucelabs/saucectl/releases/download/v0.68.3/saucectl_0.68.3_mac_arm64.tar.gz"
+      sha256 "0e367000de40a7e9b22e6a8e1fbb7e398583d354cef06e37eeb7be73345e68de"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/saucelabs/saucectl/releases/download/v0.68.3/saucectl_0.68.3_mac_64-bit.tar.gz"
+      sha256 "295990cdfe291e649a8bf317e5363a8d085e181a55814394c53cfd13fffc39f4"
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/saucelabs/saucectl/releases/download/v0.68.2/saucectl_0.68.2_linux_64-bit.tar.gz"
-      sha256 "715bb0d155745f38933cae49f523bb7c61239c760c6a5ad9ee7e3d8cf75ec9ad"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/saucelabs/saucectl/releases/download/v0.68.2/saucectl_0.68.2_linux_arm64.tar.gz"
-      sha256 "be0a7143a8531fae86e87d4446b7657302367865a8e051d74058cd4062aa1cfe"
+      url "https://github.com/saucelabs/saucectl/releases/download/v0.68.3/saucectl_0.68.3_linux_arm64.tar.gz"
+      sha256 "4711119dc3fd2db5ded42c2dc1919fa46ff8ff5f79997f9d0a1157d61380d351"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/saucelabs/saucectl/releases/download/v0.68.3/saucectl_0.68.3_linux_64-bit.tar.gz"
+      sha256 "ab45fd1d6c8e4acc53231900f2d978924726914ed3aaaf15c1f9e1a112afa90a"
     end
   end
 
