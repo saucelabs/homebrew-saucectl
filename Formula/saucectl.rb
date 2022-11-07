@@ -5,7 +5,7 @@
 class Saucectl < Formula
   desc "Saucectl is a command-line interface to run testrunner tests"
   homepage "https://saucelabs.com/"
-  version "0.113.1-alpha.5"
+  version "0.113.0"
 
   on_macos do
     if Hardware::CPU.intel?
