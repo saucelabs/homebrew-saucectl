@@ -9,8 +9,8 @@ jobs:
   test-bot:
     runs-on: macos-latest
     steps:
-      - name: Set up Git repository
-        uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: Run brew test-bot
         run: |
           set -e
