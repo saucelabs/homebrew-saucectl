@@ -1,0 +1,23 @@
+name: test
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Test Formula
+        run: brew audit --strict --formula --except=version Formula/saucectl.rb
+  test-install:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install Formula
+        run: |
+          brew install --formula Formula/saucectl.rb
