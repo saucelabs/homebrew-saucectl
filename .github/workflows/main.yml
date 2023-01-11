@@ -20,3 +20,13 @@ jobs:
           rm -rf "$HOMEBREW_TAP_DIR"
           ln -s "$PWD" "$HOMEBREW_TAP_DIR"
           brew test-bot
+  test-install:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install Formula
+        run: |
+          set -e
+          brew update
+          brew install Formula/saucectl.rb
