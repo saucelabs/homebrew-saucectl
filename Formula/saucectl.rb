@@ -5,20 +5,20 @@
 class Saucectl < Formula
   desc "Test orchestration with Sauce Labs"
   homepage "https://saucelabs.com/"
-  version "0.196.0"
+  version "0.197.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/saucelabs/saucectl/releases/download/v0.196.0/saucectl_0.196.0_mac_64-bit.tar.gz"
-      sha256 "5a406fe0f22cf71784969b41ab5c69c0929bf811356e845e43d4d32967e73395"
+      url "https://github.com/saucelabs/saucectl/releases/download/v0.197.0/saucectl_0.197.0_mac_64-bit.tar.gz"
+      sha256 "ef3465cca567ac931673e047e9a62c8ed027feb271d5f28b16d61829f0fb8a1a"
 
       def install
         bin.install "saucectl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/saucelabs/saucectl/releases/download/v0.196.0/saucectl_0.196.0_mac_arm64.tar.gz"
-      sha256 "b7b956355ab840632ca5aedf2489c538c54786b276ec740c70ea995b7413579b"
+      url "https://github.com/saucelabs/saucectl/releases/download/v0.197.0/saucectl_0.197.0_mac_arm64.tar.gz"
+      sha256 "7ebf7479174f50e6edd39b7acaf8deb21b74d925f18ddd0f29aa560432b1a97d"
 
       def install
         bin.install "saucectl"
@@ -28,15 +28,15 @@ class Saucectl < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/saucelabs/saucectl/releases/download/v0.196.0/saucectl_0.196.0_linux_64-bit.tar.gz"
-      sha256 "60a76ea5fc814c20eddb80278dcd5972ebc5430942f9d86dd3332fc4d1bc3bf8"
+      url "https://github.com/saucelabs/saucectl/releases/download/v0.197.0/saucectl_0.197.0_linux_64-bit.tar.gz"
+      sha256 "3e6e1972f859e1553789dae39a4089af802a6aa32c2156e14188fffc57321883"
       def install
         bin.install "saucectl"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/saucelabs/saucectl/releases/download/v0.196.0/saucectl_0.196.0_linux_arm64.tar.gz"
-      sha256 "027cdaa60afa40b9c2350efd7da08c36a417d379270dbdec5c22cf8df9c69d01"
+      url "https://github.com/saucelabs/saucectl/releases/download/v0.197.0/saucectl_0.197.0_linux_arm64.tar.gz"
+      sha256 "83af3a1cdca8eac5448e1d996dc7a8f43eb4eb92fdafea648d486f3df7deea42"
       def install
         bin.install "saucectl"
       end
