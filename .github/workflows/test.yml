@@ -6,18 +6,29 @@ on:
   pull_request:
 
 jobs:
-  test:
+  test-formula:
     runs-on: macos-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-      - name: Test Formula
-        run: brew audit --strict --formula --except=version Formula/saucectl.rb
-  test-install:
-    runs-on: macos-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Install Formula
+        uses: actions/checkout@v4
+      - name: Set up tap
         run: |
-          brew install --formula Formula/saucectl.rb
+          mkdir -p "$(brew --repository)/Library/Taps/saucelabs"
+          ln -s "$GITHUB_WORKSPACE" "$(brew --repository)/Library/Taps/saucelabs/homebrew-saucectl"
+      - name: Audit Formula
+        run: brew audit --strict --formula --except=version saucectl
+      - name: Install Formula
+        run: brew install --formula saucelabs/saucectl/saucectl
+  test-cask:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up tap
+        run: |
+          mkdir -p "$(brew --repository)/Library/Taps/saucelabs"
+          ln -s "$GITHUB_WORKSPACE" "$(brew --repository)/Library/Taps/saucelabs/homebrew-saucectl"
+      - name: Audit Cask
+        run: brew audit --cask saucectl
+      - name: Install Cask
+        run: brew install --cask saucectl
